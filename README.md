@@ -26,9 +26,12 @@ Games played on three-in-a-row boards can be traced back to ancient Egypt,where 
 
 An early variation of tic-tac-toe was played in the Roman Empire, around the first century BC. It was called terni lapilli (three pebbles at a time) and instead of having any number of pieces, each player only had three, thus they had to move them around to empty spaces to keep playing. The game's grid markings have been found chalked all over Rome. Another closely related ancient game is three men's morris which is also played on a simple grid and requires three pieces in a row to finish and Picaria, a game of the Puebloans.
 
+The project has also been enhanced by adding Rspec tests to check each and every method written works as it was intended
+
 ## 🔧 Built with<a name = "with"></a>
 
 - Ruby
+- Rspec
 
 
 ## 🔴 Live Demo <a name = "ldl"></a>
@@ -45,6 +48,13 @@ An early variation of tic-tac-toe was played in the Roman Empire, around the fir
 
 - run npm install to install the dependencies for the project.
 - [Check this link to install Ruby](https://www.ruby-lang.org/en/documentation/installation/#package-management-systems)
+
+## 🔨 Testing Game Logic
+
+To run the tests described for each method:
+- change directory to the root of the project (cd into the project folder)
+- from terminal run the command `rspec`
+- to run a specific test `rspec ./spec/tic_tac_toe_spec.rb:104` (here 104 is the line number of the method)
 
 ## ✒️  Authors <a name = "author"></a>
 
