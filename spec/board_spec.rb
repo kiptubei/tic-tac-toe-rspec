@@ -5,8 +5,6 @@ require './lib/board'
 describe Board do
   subject { Board.new(order) }
 
-  # board = Board.new(6)
-
   context '#row_check?' do
     let(:order) { 3 }
 
