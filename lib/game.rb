@@ -50,9 +50,11 @@ class Game
     puts 'Game over'
     if current_player.nil?
       puts "It's a draw"
+      0
     else
       puts "#{current_player.name} won!"
       puts "Score: #{result}"
+      1
     end
   end
 
