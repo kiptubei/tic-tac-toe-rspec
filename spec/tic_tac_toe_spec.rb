@@ -74,7 +74,7 @@ describe Board do
       expect(subject.move_empty?(1).class).to eql(Array)
     end
 
-    it 'returns Integer value if repeated move is made' do
+    it 'returns an Integer value if repeated move is made' do
       place = subject.move_empty?(1)
       subject.place_move(place, 'X')
       expect(subject.move_empty?(1)).to eql(1)
