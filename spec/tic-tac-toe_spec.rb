@@ -88,11 +88,17 @@ describe Board do
   context '#draw_and win_condition' do
     it 'returns 0 when game is drawn' do
       expect(@game.display_result(nil,0)).to eql(0)
-    end
+      end
 
     it 'returns 1 when game is won' do
       expect(@game.display_result(@player1,1)).to eql(1)
     end
   end
 
+  context '#increments_player_score' do
+    it 'returns 1 when player scores' do
+      expect(@player1.increment_score).to eql(1)
+    end
+  end
+  
 end
