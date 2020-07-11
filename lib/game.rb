@@ -31,6 +31,8 @@ class Game
     display_score(current_player, another_player)
   end
 
+  private
+
   def player_turn(current_player)
     loop do
       @board.print_board
@@ -50,9 +52,11 @@ class Game
     puts 'Game over'
     if current_player.nil?
       puts "It's a draw"
+      0
     else
       puts "#{current_player.name} won!"
       puts "Score: #{result}"
+      1
     end
   end
 
