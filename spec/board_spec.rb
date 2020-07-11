@@ -6,11 +6,9 @@ require './lib/player'
 
 describe Board do
   subject { Board.new(order) }
-  before { @player1 = Player.new('Player1', 'X') }
-  before { @player2 = Player.new('Player2', '0') }
-  before { @game = Game.new([@player1, @player2], 3) }
 
-  context '#row_check?' do
+
+  describe '#row_check?' do
     let(:order) { 3 }
 
     it 'returns true if there is a row win combination' do
@@ -25,7 +23,7 @@ describe Board do
     end
   end
 
-  context '#column_check?' do
+  describe '#column_check?' do
     let(:order) { 3 }
     it 'returns true if there is a column win combination' do
       place = subject.move_empty?(1)
@@ -39,7 +37,7 @@ describe Board do
     end
   end
 
-  context '#diagonal_checkI?' do
+  describe '#diagonal_checkI?' do
     let(:order) { 3 }
     it 'returns true if there is a diagonal win combination: diagonal I' do
       place = subject.move_empty?(1)
@@ -53,7 +51,7 @@ describe Board do
     end
   end
 
-  context '#diagonal_checkII?' do
+  describe '#diagonal_checkII?' do
     let(:order) { 3 }
     it 'returns true if there is a diagonal win combination: diagonal II' do
       place = subject.move_empty?(3)
@@ -67,7 +65,7 @@ describe Board do
     end
   end
 
-  context '#input_validation?' do
+  describe '#input_validation?' do
     let(:order) { 3 }
 
     it 'returns array if valid move is made' do
@@ -82,22 +80,6 @@ describe Board do
 
     it 'returns Integer value if Invalid move is made' do
       expect(subject.move_empty?(10)).to eql(10)
-    end
-  end
-
-  context '#draw_and win_condition' do
-    it 'returns 0 when game is drawn' do
-      expect(@game.display_result(nil, 0)).to eql(0)
-    end
-
-    it 'returns 1 when game is won' do
-      expect(@game.display_result(@player1, 1)).to eql(1)
-    end
-  end
-
-  context '#increments_player_score' do
-    it 'increments by 1 when player scores' do
-      expect(@player1.increment_score).to eql(1)
     end
   end
 end

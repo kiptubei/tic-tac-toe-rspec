@@ -31,6 +31,8 @@ class Game
     display_score(current_player, another_player)
   end
 
+  private
+
   def player_turn(current_player)
     loop do
       @board.print_board
