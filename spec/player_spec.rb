@@ -12,12 +12,4 @@ describe Player do
       end
     end
   end
-
-  describe '#move' do
-    context 'check if_players recieves prompt ,enter 1 at prompt' do
-      it 'expects a player move' do
-        allow(subject.move).to receive(:gets)
-      end
-    end
-  end
 end
